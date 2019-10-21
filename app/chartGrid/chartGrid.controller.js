@@ -1,6 +1,11 @@
 angular.module('chartGrid')
     .controller('chartGridController', ['$scope', function chartGridController($scope) {
 
+        $scope.filterRow = {
+            visible: true,
+            applyFilter: "auto"
+        };
+
         $scope.gridOptions = {
             dataSource: cars,
             allowColumnReordering: true,
@@ -11,6 +16,9 @@ angular.module('chartGrid')
                 enabled: true,
                 fileName: "cars",
                 allowExportSelectedData: false
+            },
+            bindingOptions: {
+                filterRow: "filterRow",
             },
             editing: {
                 mode: "cell",
@@ -47,8 +55,7 @@ angular.module('chartGrid')
             series: [
                 { argumentField: 'model', valueField: 'total' },
                 { argumentField: 'model', valueField: 'total2' }
-            ],
-            legend: {
+            ],legend: {
                 verticalAlignment: "bottom",
                 horizontalAlignment: "center",
                 itemTextPosition: "bottom"
