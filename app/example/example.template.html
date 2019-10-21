@@ -1,0 +1,28 @@
+﻿<div>
+    <h1 class="md-display-3">Prova Example</h1>
+</div>
+<md-button ng-click="desvelarFormulari(desvelar)">Formulari</md-button>
+<md-content ng-show="desvelar">
+    <h2>Crear nou usuari</h2>
+    <form name="nouUsuari" ng-submit="submitForm(nouUsuari.$valid)">
+        <md-input-container>
+            <label>Nom:</label>
+            <input maxlength="10" name="nom" ng-model="example.nom" placeholder="your name" required />
+            <div ng-messages="example.nom.$error">
+                <div ng-message="required">Camp requerit.</div>
+                <div ng-message="md-maxlength">Supera els 10 caràcters</div>
+            </div>
+        </md-input-container>
+        <md-input-container>
+            <label>Edat:</label>
+            <input name="edat" ng-model="example.edat" type="number" placeholder="1,2,3..." required />
+            <div ng-messages="example.edat.$error">
+                <div ng-message="required">Camp requerit.</div>
+            </div>
+        </md-input-container>
+        <div>
+            <md-button type="submit">Enviar</md-button>
+        </div>
+    </form>
+</md-content>
+

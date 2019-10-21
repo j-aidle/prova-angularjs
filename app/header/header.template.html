@@ -1,0 +1,42 @@
+﻿<md-content md-colors="{background: 'default-primary'}">
+    <md-nav-bar md-selected-nav-item="currentNavItem" aria-label="navegacio">
+        <md-button class="md-icon-button" aria-label="Side Panel" ng-click="openSideNavPanel()">
+            <md-tooltip>Side Panel</md-tooltip>
+            <md-icon class="md-default-theme" class="material-icons">&#9776;</md-icon>
+        </md-button>
+        <md-nav-item md-nav-sref="home" name="#/home">Home</md-nav-item>
+        <md-nav-item md-nav-sref="example" name="#/example">Example</md-nav-item>
+        <md-nav-item md-nav-sref="chartGrid" name="#/chartGrid">ChartGrid</md-nav-item>
+    </md-nav-bar>
+</md-content>
+
+
+<md-sidenav class="md-sidenav-left md-whiteframe-z2" md-component-id="left">
+    <md-toolbar layout="row">
+        <div class="md-toolbar-tools">
+            <h2>
+                <span>Menu</span>
+            </h2>
+            <span flex></span>
+            <md-button class="md-icon-button" ng-click="closeSideNavPanel()">
+                <md-tooltip>Tancar menu</md-tooltip>
+                <md-icon class="md-default-theme">X</md-icon>
+            </md-button>
+        </div>
+    </md-toolbar>
+    <md-content layout-padding="">
+        <md-list>
+            <md-subheader class="md-no-sticky">Menu</md-subheader>
+            <md-divider></md-divider>
+            <md-list-item>
+                <md-button href="#!/home" name="#/home">Home</md-button>
+            </md-list-item>
+            <md-list-item>
+                <md-button href="#!/example" name="#/example">Example</md-button>
+            </md-list-item>
+            <md-list-item>
+                <md-button href="#!/chartGrid" name="#/chartGrid">chartGrid</md-button>
+            </md-list-item>
+        </md-list>
+    </md-content>
+</md-sidenav>
