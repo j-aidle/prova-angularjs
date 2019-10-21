@@ -47,7 +47,12 @@ angular.module('chartGrid')
             series: [
                 { argumentField: 'model', valueField: 'total' },
                 { argumentField: 'model', valueField: 'total2' }
-            ]
+            ],
+            legend: {
+                verticalAlignment: "bottom",
+                horizontalAlignment: "center",
+                itemTextPosition: "bottom"
+            }
         };
 
 }]);
