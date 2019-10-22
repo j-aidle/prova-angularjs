@@ -84,6 +84,7 @@ angular.module('chartGrid')
 
      
         $scope.chart2Options = {
+            type: "doughnut",
             palette: "bright",
             dataSource: cars,
             title: "Cotxes Fabricats per pais"
