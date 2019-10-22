@@ -41,6 +41,7 @@ angular.module('chartGrid')
             columns: [
                 "model",
                 "any",
+                "fabricat",
                 "total",
                 { dataField: "marca", groupIndex: 0 }
             ],
@@ -80,6 +81,38 @@ angular.module('chartGrid')
                 itemTextPosition: "bottom"
             }
         };
+
+        $scope.chart2Options = {
+            palette: "bright",
+            dataSource: cars,
+            title: "Cotxes Fabricats per pais"
+            , legend: {
+                verticalAlignment: "bottom",
+                horizontalAlignment: "center",
+                itemTextPosition: "bottom"
+            },
+            "export": {
+                enabled: true
+            }, series: [
+                {
+                   argumentField: 'fabricat', valueField: 'total', label: {
+                        visible: true,
+                        font: {
+                            size: 16
+                        },
+                        connector: {
+                            visible: true,
+                            width: 0.5
+                        },
+                        position: "columns",
+                        customizeText: function (arg) {
+                            return arg.valueText + " (" + arg.percentText + ")";
+                        }
+                    }
+                }]
+
+        };
+
 
 }]);
 
