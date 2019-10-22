@@ -82,6 +82,7 @@ angular.module('chartGrid')
             }
         };
 
+     
         $scope.chart2Options = {
             palette: "bright",
             dataSource: cars,
@@ -95,7 +96,7 @@ angular.module('chartGrid')
                 enabled: true
             }, series: [
                 {
-                   argumentField: 'fabricat', valueField: 'total', label: {
+                    argumentField: 'fabricat', valueField: 'total', label: {
                         visible: true,
                         font: {
                             size: 16
