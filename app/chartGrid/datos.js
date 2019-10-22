@@ -1,4 +1,6 @@
-var cars = [{ "model": "Ferrari", "total": 140, "total2": 158 },
-    { "model": "Mercedes", "total": 190, "total2": 300 },
-    { "model": "BMW", "total": 99, "total2": 690 }
+var cars = [{ "marca": "Ferrari", "model": "F14", "any": 2014, "total": 140 },
+    { "marca": "Ferrari", "model": "F15", "any": 2015, "total": 175 },
+    { "marca": "Ferrari", "model": "F17", "any": 2017, "total": 325 },
+    { "marca": "Mercedes", "model": "M12", "any": 2012, "total": 190},
+    { "marca": "BMW", "model": "BMW1", "any": 2014, "total": 99}
 ];

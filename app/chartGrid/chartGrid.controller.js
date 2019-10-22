@@ -6,6 +6,11 @@ angular.module('chartGrid')
             applyFilter: "auto"
         };
 
+        $scope.grouping = {
+            autoExpandAll: false
+        };
+
+
         $scope.gridOptions = {
             dataSource: cars,
             allowColumnReordering: true,
@@ -19,6 +24,7 @@ angular.module('chartGrid')
             },
             bindingOptions: {
                 filterRow: "filterRow",
+                grouping: "grouping"
             },
             editing: {
                 mode: "cell",
@@ -32,7 +38,12 @@ angular.module('chartGrid')
             columnFixing: {
                 enabled: true
             },
-            columns: ["model", "total", "total2"],
+            columns: [
+                "model",
+                "any",
+                "total",
+                { dataField: "marca", groupIndex: 0 }
+            ],
             summary: {
                 totalItems: [{
                     column: "model",
@@ -45,7 +56,15 @@ angular.module('chartGrid')
                         column: "total2",
                         valueFormat: "#0.00",
                         summaryType: "sum"
+                    }],
+                groupItems: [{
+                    column: "marca",
+                    summaryType: "count"
+                },{
+                        column: "total",
+                        summaryType: "sum"
                 }]
+
             }
         };
 
@@ -53,9 +72,9 @@ angular.module('chartGrid')
             dataSource: cars,
             title: "Venta de Cotxes",
             series: [
-                { argumentField: 'model', valueField: 'total' },
-                { argumentField: 'model', valueField: 'total2' }
-            ],legend: {
+                { name: "cotxes venuts per model", type: "spline", argumentField: 'model', valueField: 'total' },
+                { name: "cotxes venuts per marca", type: "stackedBar", argumentField: 'marca', valueField: 'total' }
+            ], legend: {
                 verticalAlignment: "bottom",
                 horizontalAlignment: "center",
                 itemTextPosition: "bottom"
