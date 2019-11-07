@@ -2,9 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\app",
-    "\\app\\chartGrid",
+    "\\app\\example",
     "\\app\\header"
   ],
-  "SelectedNode": "\\app\\package.json",
+  "SelectedNode": "\\app\\header\\header.template.html",
   "PreviewInSolutionExplorer": false
 }
