@@ -25,7 +25,7 @@
     "devextreme": "19.1.6",
     "devextreme-angular": "19.1.6",
     "html5-boilerplate": "0.0.1",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "rxjs": "^6.5.3",
     "zone.js": "^0.9.1"
   },
